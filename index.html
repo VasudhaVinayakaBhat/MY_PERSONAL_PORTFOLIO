@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>Vasudha - Personal Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 32);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(16, 16, 46);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(163, 163, 241);
+        }
+
+        main hr {
+            border: 0;
+            background-color: rgb(190, 94, 190);
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+        .left {
+            font-size: 1.8rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 2rem;
+            margin: 130px 0;
+        }
+
+        .rightSection img {
+            height: 70%;
+            width: 80%;
+            margin: 60px 0;
+        }
+
+        .purple {
+            color: rgb(190, 94, 190);
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(190, 94, 190);
+        }
+        /* Style for the About Me, Education, and Projects sections */
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-top: 40px;
+        }
+
+        .section-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: rgb(190, 94, 190);
+        }
+
+        .section-content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        /* Style for the Resume and Get in Touch buttons */
+.resume-button,
+.get-in-touch-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: rgb(190, 94, 190);
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.resume-button:hover,
+.get-in-touch-button:hover {
+    background-color: rgb(163, 163, 241);
+    cursor: pointer;
+}
+
+/* Style for the buttons container */
+.buttons-container {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Center the buttons vertically */
+    margin-top: 30px; /* Adjust the margin to separate the buttons from the content */
+}
+
+/* Add space between buttons */
+.resume-button + .get-in-touch-button {
+    margin-left: 20px; /* Adjust the amount of space between buttons */
+}
+/* Style for the Education section */
+.section-content {
+    text-align: center;
+}
+
+.school {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.school:hover {
+    transform: translateY(-5px);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.school h3 {
+    font-size: 1.5rem;
+    color: rgb(190, 94, 190);
+    margin-bottom: 10px;
+}
+
+.education-details p {
+    font-size: 1.2rem;
+    color: #ecebeb;
+    margin: 5px 0;
+}
+/* Style for the Project section */
+.section-content {
+    text-align: center;
+}
+
+.project {
+    
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+    font-size: 1.8rem;
+    color: rgb(190, 94, 190);
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1.4rem;
+    color: #ccc7c7;
+    margin-bottom: 20px;
+    text-align: left;
+}
+/* Style for the Contact Me section */
+footer {
+    background-color: rgb(16, 16, 46);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-me {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-me h2 {
+    font-size: 2rem;
+    color: rgb(190, 94, 190);
+    margin-bottom: 20px;
+}
+
+.contact-me address p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(216, 117, 216, 0.438);
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: rgb(163, 163, 241);
+    cursor: pointer;
+}
+
+/* Style for the clickable email address */
+.contact-me a {
+    color: rgb(190, 94, 190);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-me a:hover {
+    color: rgb(163, 163, 241);
+    cursor: pointer;
+}
+/* Style for the social link buttons */
+.social-links a {
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(216, 117, 216, 0.438);
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: rgb(190, 94, 190);
+    cursor: pointer;
+    color: white;
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Vasudha's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection"> Hi, My name is <span class="purple"> Vasudha</span>
+                <div>and I am passionate about all aspects of <span class="purple">web development</span> , including
+                    <span id="element"></span>
+                </div>
+            </div>
+
+            <div class="rightSection"><img src="developer.png"></div>
+        </section>
+        <!-- About Me Section -->
+        <section id="about">
+            <div class="about" onmouseover="hoverProject(this)" onmouseleave="unhoverProject(this)">
+
+            <div class="section-content">
+                <h2>About Me</h2>
+                <p>Hello! I'm Vasudha, and I'm passionate about web development and design. I'm currently a final year undergraduate student pursuing a major in Information Science and Engineering at MVJ College of Engineering in Bengaluru.</p>
+         <hr>        <!-- Add a Resume button -->
+        <a href="https://drive.google.com/file/d/1NQWsDFgdbknS-UKlWUc8F3uwhcD2cIGw/view?usp=sharing" class="resume-button">Resume</a>
+
+        <!-- Add a Get in Touch button -->
+        <a href="#contact" class="get-in-touch-button">Get in Touch</a>
+            </div>
+        </div>
+        </section>
+
+        <!-- Education Section -->
+<section id="education">
+    <div class="education" onmouseover="hoverProject(this)" onmouseleave="unhoverProject(this)">
+
+    <div class="section-content">
+        <h2>Education</h2>
+
+        <!-- MVJ College of Engineering -->
+        <div class="school">
+            <h3> MVJ College of  Engineering</h3>
+            <div class="education-details">
+                <p>Bachelor of Engineering (B.E.) in Information Science & Engineering</p>
+                <p>2024 | Bangalore</p>
+                <p>CGPA: 9.35 (Till 6th Semester)</p>
+            </div>
+        </div>
+
+        <!-- Excellent Pu College -->
+        <div class="school">
+            <h3>Excellent PU College</h3>
+            <div class="education-details">
+                <p>Senior Secondary (Class XII)</p>
+                <p>2020 | Moodbidri</p>
+                <p>Percentage: 91%</p>
+            </div>
+        </div>
+
+        <!-- Kalika Bhavani High School -->
+        <div class="school">
+            <h3>Kalika Bhavani High School</h3>
+            <div class="education-details">
+                <p>Secondary (Class X)</p>
+                <p>2018 | Kansur (Uttara-kannada)</p>
+                <p>Percentage: 88.48%</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<!-- Project Section -->
+<section id="projects">
+    <div class="project" onmouseover="hoverProject(this)" onmouseleave="unhoverProject(this)">
+
+    <div class="section-content">
+        <h2>Projects</h2>
+
+        <!-- Rakthanidhi Project -->
+        <div class="project">
+            <h3>Rakthanidhi</h3>
+            <p>Developed "Rakthanidhi" web app using HTML, CSS, PHP, MySQL for efficient blood bank inventory tracking, donor management, and campaign organization, with a focus on real-time stock alerts for timely restocking.</p>
+        </div>
+
+        <!-- Portfolio Website Project -->
+        <div class="project">
+            <h3>Portfolio Website</h3>
+            <p>Crafted optimal user interfaces with modern design techniques, and led creation of an impressive portfolio website using HTML, CSS, JavaScript.</p>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+
+
+
+    </main>
+    <!-- Load library from the CDN -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Front-end development', 'graphic design', 'web design', 'etc...'],
+            typeSpeed: 50,
+        });
+    </script>
+    <script>
+        function hoverProject(card) {
+            card.style.transform = 'scale(1.05)';
+        }
+    
+        function unhoverProject(card) {
+            card.style.transform = 'scale(1)';
+        }
+    </script>
+    <script>
+        function hoverProject(card) {
+            card.style.transform = 'scale(1.05)';
+        }
+    
+        function unhoverProject(card) {
+            card.style.transform = 'scale(1)';
+        }
+    </script>
+    
+</body>
+<!-- Contact Me Section -->
+<footer id="contact">
+    <div class="contact-me">
+        <h2>Contact Me</h2>
+        <address>
+            
+            <p>Phone: 8618718052</p>
+            <p>Email: <a href="mailto:vasudhavasudhabhat@gmail.com">vasudhavasudhabhat@gmail.com</a></p>
+        </address>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/vasudha-bhat" target="_blank">Vasudha Bhat | LinkedIn</a>
+        </div>
+    </div>
+</footer>
+
+
+</html>
